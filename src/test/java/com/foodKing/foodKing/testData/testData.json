@@ -1,0 +1,36 @@
+[
+	
+	{
+		"mobile":"1890318880",
+		"firstName":"Test",
+		"lastName":"NG",
+		"email":"test@example.com",
+		"password":"123456"
+	},
+	{
+		"email":"admin@example.com",
+		"password":"123456"
+	},
+	{
+		"email":"INVALID@example.com",
+		"password":"1234567890"
+	},
+	{
+		"email":"",
+		"password":""
+	},
+	{
+			"mobile":"1890318880",
+			"firstName":"",
+			"lastName":"",
+			"email":"",
+			"password":""
+	},
+	{
+		"search":"Burger"
+	},
+	{
+			
+		"wrongSearch":"Pasta"
+	}
+]
