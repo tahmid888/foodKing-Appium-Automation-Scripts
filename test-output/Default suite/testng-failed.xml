@@ -7,7 +7,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="noSearchResult" invocation-numbers="0"/>
+          <include name="noSearchResult"/>
         </methods>
       </class> <!-- com.foodKing.foodKing.tests.TC08_NoSearchResultTest -->
     </classes>

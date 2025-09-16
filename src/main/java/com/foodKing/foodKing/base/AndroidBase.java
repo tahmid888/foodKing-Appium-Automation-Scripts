@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -33,15 +35,29 @@ public class AndroidBase extends AppiumUtils {
 				: prop.getProperty("ipAddress");
 		// String port = prop.getProperty("port");
 		int port = Integer.parseInt(prop.getProperty("port"));
+		
+		Map<String, String> env = new HashMap<>(System.getenv());
+		env.put("ANDROID_HOME", "/Users/tahamidulhaque/Library/Android/sdk");
+		env.put("ANDROID_SDK_ROOT", "/Users/tahamidulhaque/Library/Android/sdk");
 
-		// Start Appium server programmatically
-		service = AppiumDriverLocalService
-				.buildService(new AppiumServiceBuilder().usingDriverExecutable(new File("/usr/local/bin/node")) // Node
-																												// executable
-						.withAppiumJS(new File("/usr/local/lib/node_modules/appium/build/lib/main.js")) // Appium
-																										// main.js
-						.withIPAddress(ipAddress).usingPort(port));
-		service.start();
+//		// Start Appium server programmatically
+//		service = AppiumDriverLocalService
+//				.buildService(new AppiumServiceBuilder().usingDriverExecutable(new File("/usr/local/bin/node")) // Node
+//																												// executable
+//						.withAppiumJS(new File("/usr/local/lib/node_modules/appium/build/lib/main.js")) // Appium
+//																										// main.js
+//						.withIPAddress(ipAddress).usingPort(port));
+//		
+//		service.start();
+		// Start Appium server programmatically- Updated with environment
+	    service = new AppiumServiceBuilder()
+	            .usingDriverExecutable(new File("/usr/local/bin/node"))
+	            .withAppiumJS(new File("/usr/local/lib/node_modules/appium/build/lib/main.js"))
+	            .withIPAddress(ipAddress)
+	            .usingPort(port)
+	            .withEnvironment(env)  // <-- important
+	            .build();
+	    service.start();
 
 		// Configure Android driver
 		UiAutomator2Options options = new UiAutomator2Options();
