@@ -1,9 +1,18 @@
 package com.foodKing.foodKing.utils;
 
 import java.time.Duration;
+import java.util.Arrays;
+
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.google.common.collect.ImmutableMap;
+
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import testappium.utils.AppiumUtils;
@@ -22,6 +31,45 @@ public class AndroidActions extends AppiumUtils {
 		return driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"
 				+ ".scrollIntoView(new UiSelector().description(\"" + accId + "\"));"));
 	}
+	
+//	public void swipeAction(WebElement ele,String direction)
+//    {
+//        ((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
+//                "elementId", ((RemoteWebElement)ele).getId(),
+//
+//                "direction", direction,
+//                "percent", 0.75
+//            ));
+//
+//
+//    }
+	
+	public void swipeHorizontal(int startX, int endX, int y, int durationMillis) {
+        // Create a finger input
+        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+
+        // Build the swipe sequence
+        Sequence swipe = new Sequence(finger, 1);
+        swipe.addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), startX, y));
+        swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+        swipe.addAction(finger.createPointerMove(Duration.ofMillis(durationMillis),
+                PointerInput.Origin.viewport(), endX, y));
+        swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+
+        // Perform the swipe
+        driver.perform(Arrays.asList(swipe));
+    }
+
+    /** Convenience: swipe left on menu (reveal right-side items). */
+    public void swipeLeftOnMenu() {
+        swipeHorizontal(961, 200, 642, 300);
+    }
+
+    /** Convenience: swipe right on menu (go back). */
+    public void swipeRightOnMenu() {
+        swipeHorizontal(200, 961, 642, 300);
+    }
+    
 
 	/*
 	 * // waitForElementVisible public WebElement waitForElementVisible(By locator,

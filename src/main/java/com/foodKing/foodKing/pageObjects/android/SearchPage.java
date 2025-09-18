@@ -49,15 +49,14 @@ public class SearchPage extends AndroidActions {
 		WebElement visibleElement = waitForVisibility(itemAvailable, 15);
 		return visibleElement.getAttribute("contentDescription");
 	}
+//	public void waitUntilItemsAvailableTextContains(String text) {
+//	// Wait until contentDescription contains specific text
+//	waitForAttributeContains(itemAvailable, "contentDescription", text, 15);
+//}
 
 	public String getNoSearchResult() {
 		WebElement input = waitForVisibility(noSearchMessage, 10);
 		return input.getAttribute("contentDescription");
 	}
-
-//	public void waitUntilItemsAvailableTextContains(String text) {
-//		// Wait until contentDescription contains specific text
-//		waitForAttributeContains(itemAvailable, "contentDescription", text, 15);
-//	}
 
 }

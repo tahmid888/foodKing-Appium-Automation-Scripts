@@ -2,31 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-17T01:34:35 BDT" name="Default suite" finished-at="2025-09-17T01:34:46 BDT" duration-ms="10906">
+  <suite started-at="2025-09-19T02:45:09 BDT" name="Default suite" finished-at="2025-09-19T02:45:33 BDT" duration-ms="24681">
     <groups>
     </groups>
-    <test started-at="2025-09-17T01:34:35 BDT" name="Default test" finished-at="2025-09-17T01:34:46 BDT" duration-ms="10906">
-      <class name="com.foodKing.foodKing.tests.TC08_NoSearchResultTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.foodKing.foodKing.tests.TC08_NoSearchResultTest@74e52ef6]" started-at="2025-09-17T01:34:35 BDT" name="setUp" finished-at="2025-09-17T01:34:40 BDT" duration-ms="4309" status="PASS">
+    <test started-at="2025-09-19T02:45:09 BDT" name="Default test" finished-at="2025-09-19T02:45:33 BDT" duration-ms="24681">
+      <class name="com.foodKing.foodKing.tests.TC10_VerifyMenuIsDisplayedTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.foodKing.foodKing.tests.TC10_VerifyMenuIsDisplayedTest@5aa9e4eb]" started-at="2025-09-19T02:45:09 BDT" name="setUp" finished-at="2025-09-19T02:45:11 BDT" duration-ms="2530" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="noSearchResult(java.util.HashMap)[pri:0, instance:com.foodKing.foodKing.tests.TC08_NoSearchResultTest@74e52ef6]" started-at="2025-09-17T01:34:40 BDT" name="noSearchResult" data-provider="getData" finished-at="2025-09-17T01:34:46 BDT" duration-ms="6334" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{wrongSearch=Pasta}]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="verifyMenuIsDisplay()[pri:0, instance:com.foodKing.foodKing.tests.TC10_VerifyMenuIsDisplayedTest@5aa9e4eb]" started-at="2025-09-19T02:45:11 BDT" name="verifyMenuIsDisplay" finished-at="2025-09-19T02:45:33 BDT" duration-ms="21937" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- noSearchResult -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.foodKing.foodKing.tests.TC08_NoSearchResultTest@74e52ef6]" started-at="2025-09-17T01:34:46 BDT" name="tearDown" finished-at="2025-09-17T01:34:46 BDT" duration-ms="174" status="PASS">
+        </test-method> <!-- verifyMenuIsDisplay -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.foodKing.foodKing.tests.TC10_VerifyMenuIsDisplayedTest@5aa9e4eb]" started-at="2025-09-19T02:45:33 BDT" name="tearDown" finished-at="2025-09-19T02:45:33 BDT" duration-ms="201" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.foodKing.foodKing.tests.TC08_NoSearchResultTest -->
+      </class> <!-- com.foodKing.foodKing.tests.TC10_VerifyMenuIsDisplayedTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
