@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-19T02:45:09 BDT" name="Default suite" finished-at="2025-09-19T02:45:33 BDT" duration-ms="24681">
+  <suite started-at="2025-09-20T00:54:33 BDT" name="Default suite" finished-at="2025-09-20T00:54:39 BDT" duration-ms="6521">
     <groups>
     </groups>
-    <test started-at="2025-09-19T02:45:09 BDT" name="Default test" finished-at="2025-09-19T02:45:33 BDT" duration-ms="24681">
-      <class name="com.foodKing.foodKing.tests.TC10_VerifyMenuIsDisplayedTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.foodKing.foodKing.tests.TC10_VerifyMenuIsDisplayedTest@5aa9e4eb]" started-at="2025-09-19T02:45:09 BDT" name="setUp" finished-at="2025-09-19T02:45:11 BDT" duration-ms="2530" status="PASS">
+    <test started-at="2025-09-20T00:54:33 BDT" name="Default test" finished-at="2025-09-20T00:54:39 BDT" duration-ms="6521">
+      <class name="com.foodKing.foodKing.tests.TC12_SelectMenuWithItemTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.foodKing.foodKing.tests.TC12_SelectMenuWithItemTest@5aa9e4eb]" started-at="2025-09-20T00:54:33 BDT" name="setUp" finished-at="2025-09-20T00:54:35 BDT" duration-ms="2370" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyMenuIsDisplay()[pri:0, instance:com.foodKing.foodKing.tests.TC10_VerifyMenuIsDisplayedTest@5aa9e4eb]" started-at="2025-09-19T02:45:11 BDT" name="verifyMenuIsDisplay" finished-at="2025-09-19T02:45:33 BDT" duration-ms="21937" status="PASS">
+        <test-method signature="selectMenuItemAndVerify()[pri:0, instance:com.foodKing.foodKing.tests.TC12_SelectMenuWithItemTest@5aa9e4eb]" started-at="2025-09-20T00:54:35 BDT" name="selectMenuItemAndVerify" finished-at="2025-09-20T00:54:39 BDT" duration-ms="3940" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyMenuIsDisplay -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.foodKing.foodKing.tests.TC10_VerifyMenuIsDisplayedTest@5aa9e4eb]" started-at="2025-09-19T02:45:33 BDT" name="tearDown" finished-at="2025-09-19T02:45:33 BDT" duration-ms="201" status="PASS">
+        </test-method> <!-- selectMenuItemAndVerify -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.foodKing.foodKing.tests.TC12_SelectMenuWithItemTest@5aa9e4eb]" started-at="2025-09-20T00:54:39 BDT" name="tearDown" finished-at="2025-09-20T00:54:39 BDT" duration-ms="196" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.foodKing.foodKing.tests.TC10_VerifyMenuIsDisplayedTest -->
+      </class> <!-- com.foodKing.foodKing.tests.TC12_SelectMenuWithItemTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

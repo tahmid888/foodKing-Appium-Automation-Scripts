@@ -20,6 +20,7 @@ public class TC10_VerifyMenuIsDisplayedTest extends AndroidBase {
 		//menuPage.swipeUntilElementVisible(menuPage.getLastMenuItem(), input.get("direction"),10);
 		menuPage.swipeUntilElementVisible(menuPage.getLastMenuItem(), "left", 10);
 		
+		
 		String actualMessage = menuPage.getLastMenuItem().getAttribute("content-desc");
 		System.out.println("UI message content-desc: " + actualMessage);
 		Assert.assertEquals(actualMessage, "Beverages");

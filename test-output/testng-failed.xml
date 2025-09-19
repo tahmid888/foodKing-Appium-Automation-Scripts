@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.foodKing.foodKing.tests.TC10_VerifyMenuIsDisplayedTest">
+      <class name="com.foodKing.foodKing.tests.TC12_SelectMenuWithItemTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="verifyMenuIsDisplay"/>
+          <include name="selectMenuItemAndVerify"/>
         </methods>
-      </class> <!-- com.foodKing.foodKing.tests.TC10_VerifyMenuIsDisplayedTest -->
+      </class> <!-- com.foodKing.foodKing.tests.TC12_SelectMenuWithItemTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
