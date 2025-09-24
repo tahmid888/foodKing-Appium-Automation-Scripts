@@ -29,7 +29,7 @@ public class AndroidActions extends AppiumUtils {
 	// Scroll
 	public WebElement scrollToElementByAccessibilityId(String accId) {
 		return driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"
-				+ ".scrollIntoView(new UiSelector().description(\"" + accId + "\"));"));
+				+ ".scrollIntoView(new UiSelector().descriptionContains(\"" + accId + "\"));"));
 	}
 	
 //	public void swipeAction(WebElement ele,String direction)

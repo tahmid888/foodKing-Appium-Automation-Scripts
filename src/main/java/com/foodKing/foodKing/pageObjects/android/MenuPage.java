@@ -36,6 +36,11 @@ public class MenuPage extends AndroidActions {
 
 	@AndroidFindBy(xpath = "(//android.view.View[@content-desc=\"Appetizers\"])[2]")
 	private WebElement getMenuItem;
+	
+	@AndroidFindBy(xpath = "//android.widget.ImageView[@content-desc=\"Add\"]")
+	private WebElement clickAddBtn;
+	
+
 
 	// Swipe menu till it found
 	public void swipeUntilElementVisible(WebElement element, String direction, int maxSwipes) {
@@ -119,4 +124,8 @@ public class MenuPage extends AndroidActions {
 		return getMenuItem.getAttribute("content-desc");
 	}
 
+	public void scrollTo(String addAccId) {
+		WebElement element = scrollToElementByAccessibilityId(addAccId);
+		element.click();
+	}
 }
