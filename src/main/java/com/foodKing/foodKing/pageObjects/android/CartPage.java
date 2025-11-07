@@ -22,8 +22,8 @@ public class CartPage extends AndroidActions {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
-	//Chicken Dumplings
-	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, \"Egg Roll\")]")
+	//Chicken Dumplings // Egg Roll
+	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, \"Chicken Dumplings\")]")
 	private WebElement tapAddItem;
 
 	@AndroidFindBy(xpath = "//android.widget.ImageView[contains(@content-desc, \"Add to Cart\")]")
@@ -32,7 +32,7 @@ public class CartPage extends AndroidActions {
 	@AndroidFindBy(xpath = "//android.widget.Toast[@text=\"Added to cart\"]")
 	private WebElement addToCartToasterMessage;
 
-	@AndroidFindBy(xpath = "//android.view.View[@content-desc[contains(., 'Egg Roll')]]")
+	@AndroidFindBy(xpath = "//android.view.View[@content-desc[contains(., 'Chicken Dumplings')]]")
 	private WebElement itemName;
 
 	@AndroidFindBy(xpath = "//android.widget.Button[@content-desc[contains(.,\"View cart\")]]")
@@ -54,6 +54,10 @@ public class CartPage extends AndroidActions {
 
 	
 
+	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, 'Chicken Dumplings')]//android.widget.ImageView[2]")
+	private WebElement incBtn;
+	
+	
 	
 
 	public void tapAddItem() {
@@ -139,10 +143,14 @@ public class CartPage extends AndroidActions {
 	 */
 	
 	
-	public void clickRemoveBtn() {
+	public void tapRemoveBtn() {
 	    removeBtn.click();
 	}
 	public boolean isCartEmpty() {
 	    return !emptyCartMsg.isEmpty();
+	}
+	
+	public void tapIncBtn() {
+		incBtn.click();
 	}
 }

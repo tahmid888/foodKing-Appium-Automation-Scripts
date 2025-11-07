@@ -19,7 +19,7 @@ public class TC14_VerifyIncFromCartTest extends AndroidBase{
 		cartPage.tapAddItem();
 		cartPage.tapAddToCart();
 		cartPage.tapViewCart();
-		
+		cartPage.tapIncBtn();
 
 	}
 }

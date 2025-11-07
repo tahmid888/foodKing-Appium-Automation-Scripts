@@ -19,7 +19,7 @@ public class TC15_VerifyRemoveItemFromCartTest extends AndroidBase {
 		cartPage.tapAddItem();
 		cartPage.tapAddToCart();
 		cartPage.tapViewCart();
-		cartPage.clickRemoveBtn();
+		cartPage.tapRemoveBtn();
 		
 		if (cartPage.isCartEmpty()) {
 			Assert.assertTrue(true, "Cart is empty as expected.");
