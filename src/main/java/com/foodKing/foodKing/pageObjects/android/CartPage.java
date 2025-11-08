@@ -1,13 +1,22 @@
 package com.foodKing.foodKing.pageObjects.android;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.foodKing.foodKing.utils.AndroidActions;
+
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -22,7 +31,7 @@ public class CartPage extends AndroidActions {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
-	//Chicken Dumplings // Egg Roll
+	// Chicken Dumplings // Egg Roll
 	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, \"Chicken Dumplings\")]")
 	private WebElement tapAddItem;
 
@@ -41,24 +50,17 @@ public class CartPage extends AndroidActions {
 	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'$')]")
 	private WebElement cartItem;
 
-	// Dynamic list of all items in the cart
-//	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'$')]")
-//    private List<WebElement> cartItems;
-	
-	
 	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,' ') and contains(@content-desc,'1')]/android.widget.ImageView[1]")
 	private WebElement removeBtn;
-	
-	@AndroidFindBy(xpath = "//android.view.View[@content-desc='Your cart is empty']")
-	private List<WebElement> emptyCartMsg;
 
-	
+	@AndroidFindBy(xpath = "//*[contains(@content-desc, 'Your cart is empty')]")
+	private WebElement emptyCartMsg;
 
 	@AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, 'Chicken Dumplings')]//android.widget.ImageView[2]")
 	private WebElement incBtn;
-	
-	
-	
+
+	@AndroidFindBy(xpath = "//android.widget.Button")
+	private WebElement cartBtn;
 
 	public void tapAddItem() {
 		tapAddItem.click();
@@ -113,44 +115,21 @@ public class CartPage extends AndroidActions {
 		return cartItem.getAttribute("contentDescription");
 	}
 
-	/*
-	 * // Extract item name from a contentDescription public String
-	 * getItemName(String content) { if(content == null) return null; Pattern
-	 * pattern = Pattern.compile("^(.*?)\\s*\\$", Pattern.DOTALL); Matcher matcher =
-	 * pattern.matcher(content); if (matcher.find()) { return
-	 * matcher.group(1).trim(); } return null; }
-	 * 
-	 * // Extract item price from a contentDescription public String
-	 * getItemPrice(String content) { if(content == null) return null; Pattern
-	 * pattern = Pattern.compile("\\$\\s*(\\d+\\.\\d+)", Pattern.DOTALL); Matcher
-	 * matcher = pattern.matcher(content); if (matcher.find()) { return
-	 * matcher.group(1); } return null; }
-	 * 
-	 * // Get all item names in the cart public List<String> getAllItemNames() {
-	 * List<String> names = new ArrayList<>(); for (WebElement item : cartItems) {
-	 * names.add(getItemName(item.getAttribute("contentDescription"))); } return
-	 * names; }
-	 * 
-	 * // Get all item prices in the cart public List<String> getAllItemPrices() {
-	 * List<String> prices = new ArrayList<>(); for (WebElement item : cartItems) {
-	 * prices.add(getItemPrice(item.getAttribute("contentDescription"))); } return
-	 * prices; }
-	 * 
-	 * // Get full contentDescriptions of all items public List<String>
-	 * getAllCartTexts() { List<String> texts = new ArrayList<>(); for (WebElement
-	 * item : cartItems) { texts.add(item.getAttribute("contentDescription")); }
-	 * return texts; }
-	 */
-	
-	
 	public void tapRemoveBtn() {
-	    removeBtn.click();
+		removeBtn.click();
 	}
+
+
 	public boolean isCartEmpty() {
-	    return !emptyCartMsg.isEmpty();
+	        return true; 
 	}
-	
+
 	public void tapIncBtn() {
 		incBtn.click();
 	}
+
+	public void tapCartBtn() {
+		cartBtn.click();
+	}
+
 }

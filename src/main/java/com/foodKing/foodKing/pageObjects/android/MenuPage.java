@@ -40,6 +40,7 @@ public class MenuPage extends AndroidActions {
 	@AndroidFindBy(xpath = "//android.widget.ImageView[@content-desc=\"Add\"]")
 	private WebElement clickAddBtn;
 	
+	
 
 
 	// Swipe menu till it found

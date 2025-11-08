@@ -7,11 +7,10 @@ import com.foodKing.foodKing.base.AndroidBase;
 import com.foodKing.foodKing.pageObjects.android.CartPage;
 import com.foodKing.foodKing.pageObjects.android.MenuPage;
 
-public class TC14_VerifyIncFromCartTest extends AndroidBase {
+public class TC16_SubTotalAmountTest extends AndroidBase{
 
-	@Test()
-	public void VerifyIncFromCart() {
-
+	@Test
+	public void verifySubtotal() throws InterruptedException {
 		MenuPage menuPage = new MenuPage(driver);
 		menuPage.tapMenu();
 
@@ -19,8 +18,7 @@ public class TC14_VerifyIncFromCartTest extends AndroidBase {
 		cartPage.tapAddItem();
 		cartPage.tapAddToCart();
 		cartPage.tapViewCart();
-		cartPage.tapIncBtn();
+		
 
 	}
-
 }

@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-07T21:15:54 BDT" name="Default suite" finished-at="2025-11-07T21:16:04 BDT" duration-ms="10222">
+  <suite started-at="2025-11-09T00:07:46 BDT" name="Default suite" finished-at="2025-11-09T00:07:56 BDT" duration-ms="9742">
     <groups>
     </groups>
-    <test started-at="2025-11-07T21:15:54 BDT" name="Default test" finished-at="2025-11-07T21:16:04 BDT" duration-ms="10222">
-      <class name="com.foodKing.foodKing.tests.TC14_VerifyIncFromCartTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.foodKing.foodKing.tests.TC14_VerifyIncFromCartTest@5aa9e4eb]" started-at="2025-11-07T21:15:54 BDT" name="setUp" finished-at="2025-11-07T21:15:56 BDT" duration-ms="2477" status="PASS">
+    <test started-at="2025-11-09T00:07:46 BDT" name="Default test" finished-at="2025-11-09T00:07:56 BDT" duration-ms="9742">
+      <class name="com.foodKing.foodKing.tests.TC15_VerifyRemoveItemFromCartTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.foodKing.foodKing.tests.TC15_VerifyRemoveItemFromCartTest@5aa9e4eb]" started-at="2025-11-09T00:07:46 BDT" name="setUp" finished-at="2025-11-09T00:07:48 BDT" duration-ms="2304" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="VerifyIncFromCart()[pri:0, instance:com.foodKing.foodKing.tests.TC14_VerifyIncFromCartTest@5aa9e4eb]" started-at="2025-11-07T21:15:56 BDT" name="VerifyIncFromCart" finished-at="2025-11-07T21:16:04 BDT" duration-ms="7517" status="PASS">
+        <test-method signature="verifyRemoveItemFromCart()[pri:0, instance:com.foodKing.foodKing.tests.TC15_VerifyRemoveItemFromCartTest@5aa9e4eb]" started-at="2025-11-09T00:07:48 BDT" name="verifyRemoveItemFromCart" finished-at="2025-11-09T00:07:55 BDT" duration-ms="7204" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyIncFromCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.foodKing.foodKing.tests.TC14_VerifyIncFromCartTest@5aa9e4eb]" started-at="2025-11-07T21:16:04 BDT" name="tearDown" finished-at="2025-11-07T21:16:04 BDT" duration-ms="213" status="PASS">
+        </test-method> <!-- verifyRemoveItemFromCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.foodKing.foodKing.tests.TC15_VerifyRemoveItemFromCartTest@5aa9e4eb]" started-at="2025-11-09T00:07:55 BDT" name="tearDown" finished-at="2025-11-09T00:07:56 BDT" duration-ms="222" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.foodKing.foodKing.tests.TC14_VerifyIncFromCartTest -->
+      </class> <!-- com.foodKing.foodKing.tests.TC15_VerifyRemoveItemFromCartTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
