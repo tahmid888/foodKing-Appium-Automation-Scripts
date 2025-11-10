@@ -1,21 +1,14 @@
 package com.foodKing.foodKing.pageObjects.android;
 
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.foodKing.foodKing.utils.AndroidActions;
-
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -62,6 +55,9 @@ public class CartPage extends AndroidActions {
 	@AndroidFindBy(xpath = "//android.widget.Button")
 	private WebElement cartBtn;
 
+	@AndroidFindBy(xpath = "//android.view.View[@content-desc='Subtotal']/following-sibling::android.view.View[2]")
+	private WebElement subtotalValue;
+
 	public void tapAddItem() {
 		tapAddItem.click();
 	}
@@ -92,7 +88,7 @@ public class CartPage extends AndroidActions {
 		Pattern pattern = Pattern.compile("^(.*?)\\s*\\$", Pattern.DOTALL);
 		Matcher matcher = pattern.matcher(content);
 		if (matcher.find()) {
-			return matcher.group(1).trim(); // "Chicken Dumplings"
+			return matcher.group(1).trim();
 		}
 		return null;
 	}
@@ -119,9 +115,8 @@ public class CartPage extends AndroidActions {
 		removeBtn.click();
 	}
 
-
 	public boolean isCartEmpty() {
-	        return true; 
+		return true;
 	}
 
 	public void tapIncBtn() {
@@ -130,6 +125,12 @@ public class CartPage extends AndroidActions {
 
 	public void tapCartBtn() {
 		cartBtn.click();
+	}
+
+	public double getSubtotalAmount() {
+		String rawSubtotal = subtotalValue.getAttribute("content-desc");
+		rawSubtotal = rawSubtotal.replace("$", "").trim();
+		return Double.parseDouble(rawSubtotal);
 	}
 
 }

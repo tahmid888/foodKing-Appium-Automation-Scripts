@@ -19,6 +19,11 @@ public class TC16_SubTotalAmountTest extends AndroidBase{
 		cartPage.tapAddToCart();
 		cartPage.tapViewCart();
 		
+		double actualSubtotal = cartPage.getSubtotalAmount();
+	    System.out.println("Subtotal value found: " + actualSubtotal);
+
+	    double expectedSubtotal = 2.50;
+	    Assert.assertEquals(actualSubtotal, expectedSubtotal, "Subtotal mismatch!");
 
 	}
 }
