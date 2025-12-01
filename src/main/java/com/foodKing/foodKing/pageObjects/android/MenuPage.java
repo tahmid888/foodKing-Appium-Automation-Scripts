@@ -128,5 +128,6 @@ public class MenuPage extends AndroidActions {
 	public void scrollTo(String addAccId) {
 		WebElement element = scrollToElementByAccessibilityId(addAccId);
 		element.click();
+		System.out.println("Scrolled to: " + element.getAttribute("content-desc"));
 	}
 }

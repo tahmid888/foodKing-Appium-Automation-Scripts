@@ -13,6 +13,7 @@ public class TC18_ProceedToCheckoutwithoutLoginTest extends AndroidBase{
 	
 	@Test
 	public void proceedToCheckout() {
+		
 		MenuPage menuPage = new MenuPage(driver);
 		menuPage.tapMenu();
 

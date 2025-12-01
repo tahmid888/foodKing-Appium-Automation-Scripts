@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import com.foodKing.foodKing.base.AndroidBase;
 import com.foodKing.foodKing.pageObjects.android.LoginPage;
 
-public class TC02_LoginTest extends AndroidBase {
+public class TC02_LoginInvalidTest extends AndroidBase {
 
 	@Test(dataProvider = "getData")
 	public void invalidLogin(HashMap<String, String> input) {

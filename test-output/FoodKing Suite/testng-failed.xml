@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [FoodKing Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Login then Checkout(failed)">
+    <classes>
+      <class name="com.foodKing.foodKing.tests.TC19_ProceedToCheckoutTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="proceedToCheckout"/>
+        </methods>
+      </class> <!-- com.foodKing.foodKing.tests.TC19_ProceedToCheckoutTest -->
+      <class name="com.foodKing.foodKing.tests.TC01_LoginTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="Login"/>
+        </methods>
+      </class> <!-- com.foodKing.foodKing.tests.TC01_LoginTest -->
+    </classes>
+  </test> <!-- Login then Checkout(failed) -->
+</suite> <!-- Failed suite [FoodKing Suite] -->

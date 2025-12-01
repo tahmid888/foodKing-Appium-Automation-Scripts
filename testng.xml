@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="FoodKingSuite">
+
+    <test name="LoginThenCheckout">
+        <classes>
+            <class name="com.foodKing.foodKing.tests.TC01_LoginTest"/>
+            <class name="com.foodKing.foodKing.tests.TC19_ProceedToCheckoutTest"/>
+        </classes>
+    </test>
+
+</suite>

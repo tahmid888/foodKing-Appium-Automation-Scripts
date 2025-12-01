@@ -75,5 +75,6 @@ public class AndroidBase extends AppiumUtils {
 	public void tearDown() {
 		driver.quit();
 		service.stop();
+		
 	}
 }

@@ -26,11 +26,17 @@ public class AndroidActions extends AppiumUtils {
 		this.driver = driver;
 	}
 
-	// Scroll
+	// Scroll - descriptionContains - Partial/String contains
 	public WebElement scrollToElementByAccessibilityId(String accId) {
 		return driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"
 				+ ".scrollIntoView(new UiSelector().descriptionContains(\"" + accId + "\"));"));
 	}
+	
+	// Scroll - description - Exact match only
+		public WebElement scrollToElementByAccessibilityIdForDescription(String accId) {
+			return driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"
+					+ ".scrollIntoView(new UiSelector().description(\"" + accId + "\"));"));
+		}
 	
 //	public void swipeAction(WebElement ele,String direction)
 //    {

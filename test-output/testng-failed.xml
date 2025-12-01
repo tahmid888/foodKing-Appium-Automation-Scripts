@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.foodKing.foodKing.tests.TC17_EmptyCartTest">
+      <class name="com.foodKing.foodKing.tests.TC28_VerifyPlacedOrderTest">
         <methods>
-          <include name="verifyEmptyCart"/>
+          <include name="verifyPlacedOrder"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.foodKing.foodKing.tests.TC17_EmptyCartTest -->
+      </class> <!-- com.foodKing.foodKing.tests.TC28_VerifyPlacedOrderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
