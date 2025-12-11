@@ -65,6 +65,9 @@ public class AndroidBase extends AppiumUtils {
 		options.setApp(
 				System.getProperty("user.dir") + "/src/test/java/com/foodKing/foodKing/resources/FoodKingApp.apk");
 		options.setCapability("autoGrantPermissions", true);
+	//	options.setCapability("adbExecTimeout", 120000); // 60 seconds
+
+
 
 		// Initialize Android driver
 		driver = new AndroidDriver(service.getUrl(), options);

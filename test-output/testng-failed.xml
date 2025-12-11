@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.foodKing.foodKing.tests.TC28_VerifyPlacedOrderTest">
+      <class name="com.foodKing.foodKing.tests.TC27_PlaceOrderTest">
         <methods>
-          <include name="verifyPlacedOrder"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="placeOrder"/>
         </methods>
-      </class> <!-- com.foodKing.foodKing.tests.TC28_VerifyPlacedOrderTest -->
+      </class> <!-- com.foodKing.foodKing.tests.TC27_PlaceOrderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
