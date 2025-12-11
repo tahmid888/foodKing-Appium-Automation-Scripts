@@ -141,10 +141,10 @@ https://play.google.com/store/apps/details?id=com.inilabs.foodking
 
 ## Feedback
 
-If you have any feedback, please reach out to me at tahmidulanon@gmail.com
+I would love to hear your feedback! Please feel free to reach out to me at tahmidulanon@gmail.com
 
 
-## Links
+## Social Links
 [![my_portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://portfolio-sigma-one-98.vercel.app)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/tahamidul-haque/)
 
